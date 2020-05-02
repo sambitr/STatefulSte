@@ -5,6 +5,8 @@ metadata:
   name: kubia
 spec:
   serviceName: kubia
+  updateStrategy:
+    type: RollingUpdate
   replicas: 2
   template:
     metadata:
