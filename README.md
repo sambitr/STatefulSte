@@ -115,3 +115,11 @@ status:
   qosClass: Burstable
   startTime: "2020-05-02T06:20:54Z"
 ```
+<p>The names of the generated PersistentVolumeClaims are composed of the name defined in the volumeClaimTemplate and the name of each pod. You can examine the claims’ YAML to see that they match the template.</p>
+```
+kumar_sambit7@cloudshell:~ (sambit-kubernetes)$ kubectl get pvc
+NAME           STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+data-kubia-0   Bound    pvc-109e4ffa-8c3d-11ea-a0e3-42010a9e0031   1Gi        RWO            standard       14m
+data-kubia-1   Bound    pvc-217db3fa-8c3d-11ea-a0e3-42010a9e0031   1Gi        RWO            standard       14m
+```
+
