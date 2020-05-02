@@ -134,3 +134,23 @@ pvc-109e4ffa-8c3d-11ea-a0e3-42010a9e0031   1Gi        RWO            Delete     
 pvc-217db3fa-8c3d-11ea-a0e3-42010a9e0031   1Gi        RWO            Delete           Bound         default/data-kubia-1   standard                16m
 kumar_sambit7@cloudshell:~ (sambit-kubernetes)$
 ```
+<p>How to talk with the pod through PROXY and API</p>
+<p><b>start the Proxy</b>
+
+```
+kumar_sambit7@cloudshell:~ (sambit-kubernetes)$ kubectl proxy
+Starting to serve on 127.0.0.1:8001
+```
+<p>In another tab check the the connection to the pod through the curl command</p>
+
+```
+kumar_sambit7@cloudshell:~ (sambit-kubernetes)$ curl localhost:8001/api/v1/namespaces/default/pods/kubia-0/proxy/
+You've hit kubia-0
+Data stored on this pod: No data posted yet
+```
+```
+kumar_sambit7@cloudshell:~ (sambit-kubernetes)$ curl localhost:8001/api/v1/namespaces/default/pods/kubia-1/proxy/
+You've hit kubia-1
+Data stored on this pod: No data posted yet
+kumar_sambit7@cloudshell:~ (sambit-kubernetes)$
+```
