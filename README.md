@@ -116,6 +116,7 @@ status:
   startTime: "2020-05-02T06:20:54Z"
 ```
 <p>The names of the generated PersistentVolumeClaims are composed of the name defined in the volumeClaimTemplate and the name of each pod. You can examine the claims’ YAML to see that they match the template.</p>
+
 ```
 kumar_sambit7@cloudshell:~ (sambit-kubernetes)$ kubectl get pvc
 NAME           STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
