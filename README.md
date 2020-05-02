@@ -123,4 +123,14 @@ NAME           STATUS   VOLUME                                     CAPACITY   AC
 data-kubia-0   Bound    pvc-109e4ffa-8c3d-11ea-a0e3-42010a9e0031   1Gi        RWO            standard       14m
 data-kubia-1   Bound    pvc-217db3fa-8c3d-11ea-a0e3-42010a9e0031   1Gi        RWO            standard       14m
 ```
-
+```
+kumar_sambit7@cloudshell:~ (sambit-kubernetes)$ kubectl get pv
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS        CLAIM                  STORAGECLASS   REASON   AGE
+mongodb-pv                                 1Gi        ROX,RWX        Retain           Terminating   default/mongodb-pvc                            23h
+pv-a                                       1Mi        RWO            Recycle          Available                                                    21m
+pv-b                                       1Mi        RWO            Recycle          Available                                                    21m
+pv-c                                       1Mi        RWO            Recycle          Available                                                    21m
+pvc-109e4ffa-8c3d-11ea-a0e3-42010a9e0031   1Gi        RWO            Delete           Bound         default/data-kubia-0   standard                16m
+pvc-217db3fa-8c3d-11ea-a0e3-42010a9e0031   1Gi        RWO            Delete           Bound         default/data-kubia-1   standard                16m
+kumar_sambit7@cloudshell:~ (sambit-kubernetes)$
+```
