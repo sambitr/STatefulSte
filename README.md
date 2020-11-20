@@ -1,4 +1,4 @@
-# STatefulSte
+# STatefulSte 
 ```
 kumar_sambit7@cloudshell:~ (sambit-kubernetes)$ kubectl get pods
 NAME                     READY   STATUS    RESTARTS   AGE
